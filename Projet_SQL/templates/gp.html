@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Grands Prix</title>
+    <style>			/*Une partie du css a été rédigé avec l'IA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url("static/Background2.jpg"); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #FFD700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        a[href="/"] {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #FFD700;
+            font-size: 1.1em;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+		
+        a[href="/"]:hover {
+            background-color: #ff4500;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            color: #f0f0f0;
+        }
+
+        th {
+            background-color: #333;
+            color: #FFD700;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+
+            a[href="/"] {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Grands Prix</h1>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Date</th>
+            <th>Circuit</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ item[0] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Retour</a>
+</body>
+</html>

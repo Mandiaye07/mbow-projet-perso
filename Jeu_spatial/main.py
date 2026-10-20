@@ -9,7 +9,7 @@ from entities.boss import Boss
 from ui.menu import MainMenu
 from ui.hud import HUD
 
-""" fonction principal , il gère la boucle principal du jeu , les états (menu/jeu), la musique ,  l'apparition des ennemis, des bonus et du boss  et enfin les collisions """
+"""fonction principal , il gère la boucle principal du jeu , les états (menu/jeu), la musique ,  l'apparition des ennemis, des bonus et du boss  et enfin les collisions """
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))

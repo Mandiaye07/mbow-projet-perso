@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Flappy Bird</title>
+        <h1><marquee>Flappy Bird</marquee></h1>
+        <br>
+        <div class="place">
+            <h2>
+                Notre site propose un jeu Flappy Bird et un classement avec les meilleurs scores du jeu.
+            </h2>
+        </div>
+        <br>
+    </head>
+    <div class="img">
+        <img width="1000" src="{{ url_for('static', filename='IMG/flappy.jpg') }}">
+    </div>
+    <body>
+        <div class="place">
+            <h2>Pour jouer 👇 :</h2>
+            <a href="/jeu"><button>Jouer</button></a>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><a class="active" href="/">Accueil</a></li>
+                <li><a class="active" href="/jeu">Flappy Bird</a></li>
+                <li><a class="active" href="/classement">Classement</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

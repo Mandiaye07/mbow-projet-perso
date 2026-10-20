@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Le Classement</title>
+        <h1><marquee>Flappy Bird</marquee></h1>
+    </head>
+    <body>
+        <h2>Entrez votre score :</h2>
+    <input type="number" id="userInput">
+    <button onclick="sauvegarderChiffre()">Enregistrer</button>
+    <div id="affichageChiffres"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="footer">
+    <ul>
+        <li><a class="active" href="/">Accueil</a></li>
+        <li><a class="active" href="/jeu">Flappy Bird</a></li>
+        <li><a class="active" href="/classement">Classement</a></li>
+    </ul>
+    </div>
+    </body>
+</html>

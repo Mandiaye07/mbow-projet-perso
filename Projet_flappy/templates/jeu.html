@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Le Jeu</title>
+        <h1><marquee>Flappy Bird</marquee></h1>
+        <br>
+        <div class="place">
+            <h2>Fait ton meilleur score!</h2>
+            <button onclick="fetch('/lancer')">Lancer le jeu</button>
+            <br>
+            <br>
+            <br>
+
+            <h2>
+                Vous pouvez également changer la couleur du fond grâce au bouton ci-dessous!
+            </h2>
+            <button onclick="ChangementCouleur()">Changez de couleur de fond</button>
+        </div>
+    </head>
+    <body>
+        <div class="footer">
+            <ul>
+                <li><a class="active" href="/">Accueil</a></li>
+                <li><a class="active" href="/jeu">Flappy Bird</a></li>
+                <li><a class="active" href="/classement">Classement</a></li>
+            </ul>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
